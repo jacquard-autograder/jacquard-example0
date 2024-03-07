@@ -1,0 +1,51 @@
+plugins {
+    id "application"
+    id "de.undercouch.download" version "5.4.0"
+    id "idea"
+}
+
+repositories {
+    maven {
+        url 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
+    }
+    mavenCentral()
+}
+
+apply plugin : "java"
+ext {
+    javaMainClass = "student.AutograderMain"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+dependencies {
+    implementation 'com.spertus:jacquard:0.1-SNAPSHOT'
+    implementation 'org.json:json:20240303'
+    implementation 'com.github.javaparser:javaparser-symbol-solver-core:3.25.3'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
+    implementation 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
+    implementation 'org.junit.platform:junit-platform-launcher:1.10.2'
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+tasks.register('installCheckstyle', Download) {
+    src 'https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.1/checkstyle-10.12.1-all.jar'
+    dest 'lib/checkstyle-10.12.1-all.jar'
+    overwrite false
+}
+
+run {
+    dependsOn(tasks.named("installCheckstyle"))
+}
+
+test {
+    useJUnitPlatform()
+}
