@@ -1,10 +1,10 @@
 # Jacquard Example 0
 
-This is an example of a simple [Jacquard](https://github.com/espertus/jacquard)
+This is an example of a simple [Jacquard](https://github.com/jacquard-autograder/jacquard)
 autograder that applies these tests to a single submitted file.
 
-* Checkstyle tests
-* PMD tests (using a single rule from a single ruleset)
+* [Checkstyle](https://checkstyle.sourceforge.io/) tests
+* [PMD](https://pmd.github.io/) tests
 * JUnit tests
 
 ## Software Requirements
@@ -124,3 +124,12 @@ docker build -t espertus/example0 .
 ```
 For more information, see [Manual Docker
 Configuration](https://gradescope-autograders.readthedocs.io/en/latest/manual_docker/)_
+
+## Next Steps
+
+See [https://github.com/jacquard-autograder/jacquard](https://github.com/jacquard-autograder/jacquard)
+for more information, including:
+
+* Documentation
+* Additional examples
+* Mailing lists
