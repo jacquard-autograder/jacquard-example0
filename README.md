@@ -7,9 +7,18 @@ autograder that applies these tests to a single submitted file.
 * [PMD](https://pmd.github.io/) tests
 * JUnit tests
 
+## Video Introduction
+See [playlist](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=31b2f9d7-3742-4ddb-bf4a-b12d0144f9e2) or individual videos:
+
+1. [Cloning the Repository](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=197b2551-3cf3-48cd-aebb-b12d000fac8c) (0:51)
+2. [Understanding MainAutograder source code](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=47e3744f-a094-45a1-88d3-b12d000fac5c) (6:25)
+3. [Testing the autograder locally](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7a015a3d-1958-4b03-97d6-b12d000facc1) (4:19)
+4. [Testing on Gradescope](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b6827696-a784-418a-beae-b12d000fd630) (3:52)
+5. [Creating your own project](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5c15c7da-62c2-48ac-8426-b12d000facff) (3:55)
+
 ## Software Requirements
 
-* bash (included on OS X and Linux)
+* bash/zsh (included on OS X and Linux)
 * Python 3 if you want to test locally by executing `test_autograder.py`
   (optional)
 
@@ -83,6 +92,7 @@ against the files in `submissions/perfect`, you could execute either:
 ```shell
 ./test_autograder.sh submissions/perfect
 ./test_autograder.sh perfect
+```
 
 ### make_autograder.sh
 
@@ -123,7 +133,7 @@ For example, because my Docker username is `espertus`, I would type:
 docker build -t espertus/example0 .
 ```
 For more information, see [Manual Docker
-Configuration](https://gradescope-autograders.readthedocs.io/en/latest/manual_docker/)_
+Configuration](https://gradescope-autograders.readthedocs.io/en/latest/manual_docker/).
 
 ## Next Steps
 

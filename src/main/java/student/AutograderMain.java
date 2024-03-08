@@ -12,7 +12,7 @@ import static java.lang.System.exit;
 
 public class AutograderMain {
     public static void main(String[] args) {
-        Autograder.initForTest();
+        Autograder.init();
 
         // For this assignment, students upload only a single file.
         final Target target = Target.fromClass(Adder.class);
