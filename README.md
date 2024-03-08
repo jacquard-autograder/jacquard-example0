@@ -129,7 +129,7 @@ docker build -t username/gradername .
 ```
 
 For example, because my Docker username is `espertus`, I would type:
-``` 
+```
 docker build -t espertus/example0 .
 ```
 For more information, see [Manual Docker
