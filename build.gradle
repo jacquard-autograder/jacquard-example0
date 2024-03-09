@@ -5,9 +5,6 @@ plugins {
 }
 
 repositories {
-    maven {
-        url 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
-    }
     mavenCentral()
 }
 
@@ -21,12 +18,8 @@ application {
 }
 
 dependencies {
-    implementation 'com.spertus:jacquard:0.1-SNAPSHOT'
-    implementation 'org.json:json:20240303'
-    implementation 'com.github.javaparser:javaparser-symbol-solver-core:3.25.3'
+    implementation 'com.spertus:jacquard:1.0.0'
     implementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
-    implementation 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
-    implementation 'org.junit.platform:junit-platform-launcher:1.10.2'
 }
 
 idea {
