@@ -222,7 +222,7 @@ def run():
     os.chdir(WORKING_SUBDIR)
     gradle_cmd = GRADLEW_WINDOWS_CMD if is_windows() else GRADLEW_UNIX_CMD
     result = subprocess.run(
-        [gradle_cmd, "clean", "run", "--quiet"],
+        [gradle_cmd, "run", "--quiet"],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )

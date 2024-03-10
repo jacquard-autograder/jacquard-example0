@@ -9,12 +9,9 @@ repositories {
 }
 
 apply plugin : "java"
-ext {
-    javaMainClass = "student.AutograderMain"
-}
 
 application {
-    mainClassName = javaMainClass
+    mainClass.set("student.AutograderMain")
 }
 
 dependencies {
