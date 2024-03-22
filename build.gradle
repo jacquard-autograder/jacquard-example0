@@ -5,18 +5,28 @@ plugins {
 }
 
 repositories {
+    maven {
+        url 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
+    }
+
     mavenCentral()
 }
 
-apply plugin : "java"
+apply plugin: "java"
 
 application {
     mainClass.set("student.AutograderMain")
 }
 
 dependencies {
-    implementation 'com.spertus:jacquard:1.0.1'
+    implementation 'com.spertus:jacquard:1.0.1-java11-SNAPSHOT'
     implementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
 }
 
 idea {
