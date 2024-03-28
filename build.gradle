@@ -11,12 +11,15 @@ repositories {
 apply plugin : "java"
 
 application {
-    mainClass.set("student.AutograderMain")
+    mainClass.set("cities.model.AutograderMain")
 }
 
 dependencies {
     implementation 'com.spertus:jacquard:1.0.1'
     implementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
+    implementation 'org.openjfx:javafx-controls:17.0.2'
+    implementation 'org.openjfx:javafx-fxml:17.0.2'
+    implementation 'com.google.guava:guava-annotations:r03'
 }
 
 idea {
