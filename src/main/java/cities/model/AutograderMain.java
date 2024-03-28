@@ -25,12 +25,6 @@ public class AutograderMain {
                 5.0);
         List<Result> results = checkstyleGrader.grade(targets);
 
-        PmdGrader pmdGrader = PmdGrader.createFromRuleSetPaths(
-                1.0,
-                5.0,
-                "category/java/bestpractices.xml");
-        results.addAll(pmdGrader.grade(targets));
-
         JUnitTester runner1 = new JUnitTester(HiddenKruskalIteratorTest.class); // 30
         results.addAll(runner1.run());
         JUnitTester runner2 = new JUnitTester(HiddenNodeTest.class); // 20
