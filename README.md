@@ -62,7 +62,7 @@ The main class of the autograder is specified in `build.gradle`:
 
 ```groovy
 ext {
-    javaMainClass = "student.AutograderMain"
+    mainClass.set("student.AutograderMain")
 }
 ```
 
