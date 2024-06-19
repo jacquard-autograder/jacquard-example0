@@ -61,7 +61,7 @@ The list of files is comma-separated, with optional whitespace.
 The main class of the autograder is specified in `build.gradle`:
 
 ```groovy
-ext {
+application {
     mainClass.set("student.AutograderMain")
 }
 ```
